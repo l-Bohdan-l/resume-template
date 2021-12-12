@@ -10,6 +10,7 @@ body {
   padding-left: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
+  counter-reset: section;
 }
 .wrapper {
   background: #ffffff;
@@ -50,7 +51,9 @@ body {
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #535c68;
+  /* color: #535c68; */
+  color: rgba(255, 255, 255, 0.829);
+  text-decoration: none;
 }
 .contacts-link-type {
   font-size: 14px;
@@ -158,6 +161,16 @@ body {
 .projects-item {
   font-weight: 700;
   margin-left: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.projects-item:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  position: absolute;
+  margin-left: -20px;
 }
 .projexts-container {
   margin-bottom: 55px;
