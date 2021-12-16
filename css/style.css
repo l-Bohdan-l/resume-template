@@ -156,7 +156,10 @@ body {
 }
 .dots {
   color: #d3d3d3;
-  font-weight: 100;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 .projects-item {
   font-weight: 700;
@@ -164,6 +167,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .projects-item:before {
