@@ -128,7 +128,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #595959;
+  color: #000000;
   margin-top: 24px;
 }
 .info-container {
@@ -146,16 +146,16 @@ body {
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #595959;
+  color: #000000;
 }
 .tech-name {
   font-weight: 400;
-  color: #595959;
+  color: #000000;
   font-size: 14px;
   line-height: 24px;
 }
 .dots {
-  color: #d3d3d3;
+  color: #000000;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -196,7 +196,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #a8a8a8;
+  color: #000000;
 }
 .profession-divider {
   color: #000000;
@@ -210,7 +210,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #595959;
+  color: #000000;
 }
 .education-university {
   font-size: 16px;
@@ -234,7 +234,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #a8a8a8;
+  color: #000000;
 }
 .education-divider {
   color: #000000;
