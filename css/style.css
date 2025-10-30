@@ -241,235 +241,282 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   counter-reset: section;
+  font-size: 13px;
 }
+
 .wrapper {
   background: #ffffff;
   display: flex;
   margin: 0 auto;
+  max-width: 210mm;
+  min-height: 297mm;
 }
+
+/* Sidebar - компактніший */
 .sidebar {
   background: #1e2939;
-  width: 370px;
-  padding: 40px;
+  width: 260px;
+  padding: 30px 25px;
+  flex-shrink: 0;
 }
+
 .about-me-container {
-  padding: 65px 99px 60px;
+  padding: 40px 50px 30px 45px;
   flex: 1;
 }
 
-/* Header Section - Improved */
+/* Header Section - компактніший */
 .header-section {
-  margin-bottom: 12px;
-  /* border-bottom: 3px solid #ff6b08; */
-  /* padding-bottom: 30px; */
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ff6b08;
+  padding-bottom: 15px;
 }
+
 .profession {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.3;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: #ff6b08;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
+
 .name {
-  font-size: 48px;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+/* Contacts - компактно */
+.contacts-container {
+  margin-bottom: 30px;
+}
+
+.contacts-title,
+.tech-skills-title,
+.soft-skills-title {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.tech-skills-item,
+.soft-skills-item {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #f0660a;
+  margin-left: 12px;
+  margin-bottom: 2px;
+}
+
+.contacts-link,
+.tech-skills-text,
+.soft-skills-text {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+}
+
+/* Tech/Soft Skills - компактно */
+.tech-skills-container,
+.soft-skills-container {
+  margin-bottom: 28px;
+}
+
+/* Section Titles - компактніші */
+.about-me-title {
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
   color: #000000;
-  margin-bottom: 3px;
-}
-.tagline {
-  font-size: 14px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #595959;
-  max-width: 600px;
-}
-
-/* Contacts */
-.contacts-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.contacts-title {
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 20px;
-}
-.tech-skills-item {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: #f0660a;
-  margin-left: 15px;
-}
-.contacts-link {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-}
-.tech-skills-text {
-  color: #e7e8ea;
-}
-
-/* Tech Skills */
-.tech-skills-container {
-  margin-bottom: 40px;
-}
-.tech-skills-title {
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-/* Soft Skills */
-.soft-skills-container {
-  margin-bottom: 40px;
-}
-.soft-skills-title {
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.soft-skills-item {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: #f0660a;
-  margin-left: 15px;
-}
-.soft-skills-text {
-  color: #e7e8ea;
-}
-
-/* Section Titles */
-.about-me-title {
-  font-size: 24px;
-  line-height: 1.3;
-  font-weight: 700;
-  color: #000000;
   margin-bottom: 15px;
-  margin-top: 10px;
-  display: inline-block; /* Додано */
+  margin-top: 25px;
+  display: inline-block;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
+
+.about-me-title:first-of-type {
+  margin-top: 0;
+}
+
 .about-me-title:after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: #ff6b08;
 }
 
-/* Work Experience */
+/* Work Experience - оптимізовано */
 .experience-item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
   border-bottom: 1px solid #e0e0e0;
 }
+
 .experience-item:last-child {
   border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
+
 .profession-title {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 15px;
+  line-height: 1.3;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: #000000;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
+
 .profession-company {
   color: #ff6b08;
   font-weight: 700;
 }
+
 .profession-time {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 11px;
+  line-height: 1.3;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: #666;
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
+
 .profession-divider {
   color: #999;
-  margin: 0 8px;
-}
-.profession-duties {
-  margin-top: 15px;
-}
-.profession-duties-item {
-  font-size: 14px;
-  line-height: 1.7;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: #333;
-  margin-bottom: 10px;
-  padding-left: 5px;
+  margin: 0 5px;
 }
 
-/* Education - Improved */
-/* .education-section {
-  margin-top: 40px;
-} */
-.education-item {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-left: 4px solid #ff6b08;
-  border-radius: 4px;
+.profession-duties {
+  margin-top: 8px;
+  padding-left: 0;
 }
-.education-university {
-  font-size: 17px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: #ff6b08;
-  margin-bottom: 8px;
-}
-.education-spec {
-  font-size: 15px;
-  line-height: 1.4;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: #000000;
-  margin-bottom: 8px;
-}
-.education-time {
-  font-size: 13px;
+
+.profession-duties-item {
+  font-size: 12px;
   line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #333;
+  margin-bottom: 6px;
+  padding-left: 3px;
+}
+
+/* Education - компактніше */
+.education-section {
+  margin-top: 20px;
+}
+
+.education-item {
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  background: #f9f9f9;
+  border-left: 3px solid #ff6b08;
+  border-radius: 3px;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-university {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ff6b08;
+  margin-bottom: 4px;
+}
+
+.education-spec {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.education-time {
+  font-size: 11px;
+  line-height: 1.3;
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: #666;
 }
+
 .education-divider {
   color: #999;
-  margin: 0 8px;
+  margin: 0 5px;
 }
 
-/* Print Styles */
+/* Print Styles - оптимізовано для A4 */
 @media print {
+  body {
+    font-size: 12px;
+  }
+
   .wrapper {
     box-shadow: none;
+    max-width: 100%;
   }
+
   .sidebar {
-    width: 280px;
-    padding: 30px;
+    width: 240px;
+    padding: 25px 20px;
   }
+
   .about-me-container {
-    padding: 40px 60px;
+    padding: 35px 40px 25px 40px;
+  }
+
+  .header-section {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  .about-me-title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .experience-item {
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+  }
+
+  .profession-duties-item {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+
+  .education-item {
+    padding: 10px 12px;
+    margin-bottom: 12px;
   }
 }
