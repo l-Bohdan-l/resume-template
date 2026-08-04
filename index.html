@@ -6,7 +6,7 @@
     <title>Bohdan Papushoi - Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -15,121 +15,140 @@
         margin: 0;
         box-sizing: border-box;
       }
-      /* 
+
       @page {
         size: A4;
         margin: 0;
-      } */
+      }
 
       body {
         font-family: "Montserrat", sans-serif;
-        counter-reset: section;
-        font-size: 13px;
+        font-size: 11px;
+        color: #333;
+        background: #f4f4f4;
+        -webkit-print-color-adjust: exact;
       }
 
       .wrapper {
         background: #ffffff;
         display: flex;
         margin: 0 auto;
-        max-width: 210mm;
-        min-height: 297mm;
+        width: 210mm;
+        height: 297mm;
+        max-height: 297mm;
+        overflow: hidden;
       }
 
-      /* Sidebar - компактніший */
+      /* Sidebar Style */
       .sidebar {
         background: #1e2939;
-        width: 260px;
-        padding: 30px 25px;
+        width: 230px;
+        padding: 22px 16px;
         flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
       }
 
-      .about-me-container {
-        padding: 40px 50px 30px 45px;
-        flex: 1;
-      }
-
-      /* Header Section - компактніший */
-      .header-section {
-        margin-bottom: 25px;
-        /* border-bottom: 2px solid #ff6b08; */
-        padding-bottom: 15px;
-      }
-
-      .profession {
-        font-size: 13px;
-        line-height: 1.3;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        color: #ff6b08;
-        text-transform: uppercase;
-        margin-bottom: 6px;
-      }
-
-      .name {
-        font-size: 34px;
-        line-height: 1.1;
-        font-weight: 700;
-        color: #000000;
-        margin-bottom: 0;
-      }
-
-      /* Contacts - компактно */
-      .contacts-container {
-        margin-bottom: 30px;
+      .contacts-container,
+      .tech-skills-container,
+      .soft-skills-container {
+        margin-bottom: 16px;
       }
 
       .contacts-title,
       .tech-skills-title,
       .soft-skills-title {
-        font-size: 18px;
+        font-size: 13.5px;
         line-height: 1.2;
         font-weight: 700;
-        color: white;
-        margin-bottom: 12px;
+        color: #ffffff;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 4px;
       }
 
-      .tech-skills-item,
-      .soft-skills-item {
-        font-size: 12px;
-        line-height: 18px;
-        font-weight: 400;
-        letter-spacing: 0.02em;
-        color: #f0660a;
-        margin-left: 12px;
+      .skills-group-name {
+        font-size: 10px;
+        font-weight: 700;
+        color: #ff6b08;
+        margin-top: 5px;
         margin-bottom: 2px;
+        text-transform: uppercase;
       }
 
-      .contacts-link,
-      .tech-skills-text,
-      .soft-skills-text {
+      .skills-list-text {
+        font-size: 10px;
+        line-height: 1.35;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .contacts-item {
+        font-size: 10px;
+        line-height: 1.5;
         color: rgba(255, 255, 255, 0.95);
-        text-decoration: none;
+        list-style: none;
       }
 
-      /* Tech/Soft Skills - компактно */
-      .tech-skills-container,
-      .soft-skills-container {
-        margin-bottom: 28px;
+      .soft-skills-list {
+        list-style: none;
       }
 
-      /* Section Titles - компактніші */
+      .soft-skills-item {
+        font-size: 10px;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      /* Main Content Style */
+      .about-me-container {
+        padding: 22px 26px 18px 26px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header-section {
+        margin-bottom: 14px;
+        /* border-bottom: 2px solid #ff6b08; */
+        padding-bottom: 6px;
+      }
+
+      .profession {
+        font-size: 11.5px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: #ff6b08;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+
+      .name {
+        font-size: 26px;
+        line-height: 1.1;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      /* Заголовки блоків з помаранчевим підкресленням */
       .about-me-title {
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.2;
         font-weight: 700;
         color: #000000;
-        margin-bottom: 12px;
-        margin-top: 20px;
-        display: inline-block;
+        margin-bottom: 10px;
+        margin-top: 8px;
         position: relative;
-        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-block;
+        padding-bottom: 3px;
       }
 
-      .about-me-title:first-of-type {
-        margin-top: 0;
-      }
-
-      .about-me-title:after {
+      .about-me-title::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -139,11 +158,15 @@
         background: #ff6b08;
       }
 
-      /* Work Experience - оптимізовано */
+      .about-me-title:first-of-type {
+        margin-top: 0;
+      }
+
+      /* Покращене розділення компаній */
       .experience-item {
-        margin-bottom: 16px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #cbd5e1;
       }
 
       .experience-item:last-child {
@@ -153,12 +176,10 @@
       }
 
       .profession-title {
-        font-size: 15px;
-        line-height: 1.3;
+        font-size: 13px;
+        line-height: 1.2;
         font-weight: 700;
-        letter-spacing: 0.02em;
         color: #000000;
-        margin-bottom: 5px;
       }
 
       .profession-company {
@@ -167,408 +188,267 @@
       }
 
       .profession-time {
-        font-size: 11px;
-        line-height: 1.3;
+        font-size: 9.5px;
+        line-height: 1.2;
         font-weight: 600;
-        letter-spacing: 0.02em;
         color: #666;
-        display: inline-block;
-        margin-bottom: 10px;
+        display: block;
+        margin-top: 2px;
+        margin-bottom: 5px;
       }
 
       .profession-divider {
         color: #999;
-        margin: 0 5px;
+        margin: 0 4px;
       }
 
       .profession-duties {
-        margin-top: 8px;
-        padding-left: 0;
+        padding-left: 14px;
       }
 
       .profession-duties-item {
-        font-size: 11.5px;
-        line-height: 1.45;
+        font-size: 10px;
+        line-height: 1.35;
         font-weight: 400;
-        letter-spacing: 0.01em;
-        color: #333;
-        margin-bottom: 5px;
-        padding-left: 3px;
+        color: #222;
+        margin-bottom: 3.5px;
       }
 
-      /* Education - компактніше */
+      /* Education Style */
       .education-section {
-        margin-top: 16px;
+        margin-top: 6px;
+      }
+
+      .education-block {
+        display: flex;
+        gap: 10px;
       }
 
       .education-item {
-        margin-bottom: 10px;
-        padding: 10px 12px;
-        background: #f9f9f9;
+        flex: 1;
+        padding: 6px 10px;
+        background: #f8f9fa;
         border-left: 3px solid #ff6b08;
-        border-radius: 3px;
-      }
-
-      .education-item:last-child {
-        margin-bottom: 0;
+        border-radius: 2px;
       }
 
       .education-university {
-        font-size: 14px;
-        line-height: 1.3;
+        font-size: 10.5px;
         font-weight: 700;
-        letter-spacing: 0.02em;
         color: #ff6b08;
-        margin-bottom: 4px;
       }
 
       .education-spec {
-        font-size: 13px;
-        line-height: 1.3;
+        font-size: 10px;
         font-weight: 600;
-        letter-spacing: 0.02em;
-        color: #000000;
-        margin-bottom: 4px;
+        color: #000;
       }
 
       .education-time {
-        font-size: 11px;
-        line-height: 1.3;
-        font-weight: 500;
-        letter-spacing: 0.02em;
+        font-size: 9px;
         color: #666;
       }
 
-      .education-divider {
-        color: #999;
-        margin: 0 5px;
-      }
-
-      /* Print Styles - оптимізовано для A4 */
+      /* Print Optimizations */
       @media print {
         body {
-          font-size: 11px; /* Зменшимо базовий розмір */
+          background: #ffffff;
         }
-
         .wrapper {
+          width: 210mm;
+          height: 297mm;
           box-shadow: none;
-          max-width: 100%;
-        }
-
-        .sidebar {
-          width: 230px; /* Трохи вужче */
-          padding: 20px 18px;
-        }
-
-        .about-me-container {
-          padding: 30px 35px 20px 35px; /* Менші відступи */
-        }
-
-        .header-section {
-          margin-bottom: 15px;
-        }
-
-        .name {
-          font-size: 30px; /* Менше ім'я */
-        }
-
-        .about-me-title {
-          font-size: 16px;
-          margin-top: 15px;
-          margin-bottom: 10px;
-        }
-
-        .experience-item {
-          margin-bottom: 12px;
-          padding-bottom: 10px;
-        }
-
-        .profession-duties-item {
-          font-size: 10.5px; /* Трохи менше */
-          line-height: 1.4;
-          margin-bottom: 4px;
-        }
-
-        .education-item {
-          padding: 8px 10px;
-          margin-bottom: 8px;
-        }
-
-        /* КРИТИЧНО - запобігаємо розриву сторінок */
-        .experience-item,
-        .education-item {
-          page-break-inside: avoid;
-        }
-
-        .education-section {
-          margin-top: 12px;
         }
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
+      <!-- Sidebar -->
       <aside class="sidebar">
-        <!-- Contacts container -->
-        <div class="contacts-container">
-          <h3 class="contacts-title">Contacts</h3>
-          <ul>
-            <li class="tech-skills-item">
-              <span class="contacts-link tech-skills-text">+380507240273</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="contacts-link tech-skills-text">Kropyvnytskyi</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="contacts-link tech-skills-text"
-                >bpapushoj@gmail.com</span
-              >
-            </li>
-          </ul>
+        <div>
+          <!-- Contacts -->
+          <div class="contacts-container">
+            <h3 class="contacts-title">Contacts</h3>
+            <ul>
+              <li class="contacts-item">+380507240273</li>
+              <li class="contacts-item">Kropyvnytskyi, Ukraine</li>
+              <li class="contacts-item">bpapushoj@gmail.com</li>
+            </ul>
+          </div>
+
+          <!-- Tech Skills Grouped -->
+          <div class="tech-skills-container">
+            <h3 class="tech-skills-title">Tech Skills</h3>
+
+            <p class="skills-group-name">Languages & Core</p>
+            <p class="skills-list-text">
+              JavaScript, HTML5/CSS3, Tailwind CSS, TypeScript
+            </p>
+
+            <p class="skills-group-name">Backend & Architecture</p>
+            <p class="skills-list-text">
+              Node-RED, Node.js, Express.js, REST APIs, Microservices, NestJS
+            </p>
+
+            <p class="skills-group-name">Frontend</p>
+            <p class="skills-list-text">React</p>
+
+            <p class="skills-group-name">Databases & Queues</p>
+            <p class="skills-list-text">
+              PostgreSQL, MongoDB, Redis, RabbitMQ, ChromaDB
+            </p>
+
+            <p class="skills-group-name">AI & Tools</p>
+            <p class="skills-list-text">
+              OpenAI API, Claude API, RAG, Docker, Git/GitHub, Jenkins
+            </p>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="soft-skills-container">
+            <h3 class="soft-skills-title">Soft Skills</h3>
+            <ul class="soft-skills-list">
+              <li class="soft-skills-item">• Architecture Ownership</li>
+              <li class="soft-skills-item">• Problem Solving</li>
+              <li class="soft-skills-item">• Teamwork & Mentoring</li>
+              <li class="soft-skills-item">• Technical Communication</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Tech Skills container -->
-        <div class="tech-skills-container">
-          <h3 class="tech-skills-title">Tech Skills</h3>
-          <ul>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">HTML5/CSS3</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">Tailwind CSS</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">JavaScript</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">TypeScript</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">React</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">Redux</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">Node.js</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">Express</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">Node-RED</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">GIT/GitHub/GitLab</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">REST API</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">PostgreSQL</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">MongoDB</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">ChromaDB</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">Redis</span>
-            </li>
-            <li class="tech-skills-item">
-              <span class="tech-skills-text">RabbitMQ</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Soft Skills container -->
-        <div class="soft-skills-container">
-          <h3 class="soft-skills-title">Soft Skills</h3>
-          <ul>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">Teamwork</span>
-            </li>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">Problem Solving</span>
-            </li>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">Communication</span>
-            </li>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">Responsibility</span>
-            </li>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">Attention to Detail</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Languages container -->
-        <div class="soft-skills-container">
+        <!-- Languages (Виправлено B2 на Upper-Intermediate) -->
+        <div class="soft-skills-container" style="margin-bottom: 0">
           <h3 class="soft-skills-title">Languages</h3>
-          <ul>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">English - B2</span>
-            </li>
-            <li class="soft-skills-item">
-              <span class="soft-skills-text">Ukrainian - Native</span>
-            </li>
+          <ul class="soft-skills-list">
+            <li class="soft-skills-item">English — B2 (Upper-Intermediate)</li>
+            <li class="soft-skills-item">Ukrainian — Native</li>
           </ul>
         </div>
       </aside>
 
       <!-- Main Content -->
-      <div class="about-me-container">
-        <!-- Header Section -->
-        <div class="header-section">
-          <h2 class="profession">Full-Stack Developer</h2>
+      <main class="about-me-container">
+        <!-- Header -->
+        <header class="header-section">
+          <p class="profession">Full-Stack Developer</p>
           <h1 class="name">Bohdan Papushoi</h1>
-        </div>
+        </header>
 
         <!-- Work Experience -->
-        <div>
-          <h3 class="about-me-title">Work Experience</h3>
+        <section>
+          <div>
+            <h2 class="about-me-title">Work Experience</h2>
+          </div>
 
           <!-- Company 1 -->
-          <div class="experience-item">
-            <h4 class="profession-title">
+          <article class="experience-item">
+            <h3 class="profession-title">
               Full-Stack Developer
-              <span class="profession-company">Learn to Earn Global</span>
-            </h4>
+              <span class="profession-company">| Learn to Earn Global</span>
+            </h3>
             <span class="profession-time"
-              >February 2025 - Present<span class="profession-divider">|</span
+              >February 2025 – Present<span class="profession-divider">|</span
               >Ukraine</span
             >
             <ul class="profession-duties">
               <li class="profession-duties-item">
-                Architected and developed modular enterprise application for
-                financial institution with 4 independent modules, featuring
-                centralized orchestrator, separate Node-RED instances per
-                module, and shared PostgreSQL database.
+                <strong>Enterprise Analytics Platform:</strong> Architected
+                multi-tenant apps using
+                <strong>NestJS, PostgreSQL, and React</strong> for business
+                analysis via registers (EDRPOU). Built RBAC, DB tenant
+                isolation, and <strong>RabbitMQ</strong> scraping pipelines.
               </li>
               <li class="profession-duties-item">
-                Built React-based admin panel with role-based access control
-                (RBAC), user management system, and authentication flows for
-                secure multi-module operations.
+                <strong>AI Call Analytics System:</strong> Developed audio
+                scoring engine with React frontend (drag-and-drop & SFTP/webitel
+                ingestion), integrated with <strong>OpenAI</strong> &
+                <strong>ElevenLabs APIs</strong> for call evaluation.
               </li>
               <li class="profession-duties-item">
-                Developed document analysis module processing scanned PDF
-                contracts using Claude API, integrating NBU (National Bank of
-                Ukraine), OpenData, and YouControl APIs for automated compliance
-                verification and Excel report generation.
+                <strong>AI Verification & Asset Valuation:</strong> Built
+                document compliance pipelines (<strong>Claude API</strong>, NBU,
+                YouControl), test generation tools (OpenAI Assistants), and a
+                collateral valuation search engine (Developers.RIA API, web
+                scraping, OpenAI matching) with Excel reporting.
               </li>
               <li class="profession-duties-item">
-                Created company verification module analyzing businesses by
-                EDRPOU code through OpenAI API and regulatory databases
-                (OpenData/YouControl), generating comprehensive compliance
-                reports with structured data output.
+                <strong>Automated Support Bot & Messaging:</strong> Built
+                Helpcrunch automation module utilizing
+                <strong>Redis caching</strong>, Webhooks, custom rule engines,
+                and <strong>RabbitMQ</strong> for asynchronous message handling.
               </li>
               <li class="profession-duties-item">
-                Implemented AI-powered test generation module leveraging OpenAI
-                Assistants API for document processing, enabling contextual test
-                creation from uploaded files with customizable parameters and
-                bulk export capabilities.
+                <strong>Multimodal AI Platform & Billing Engine:</strong>
+                Engineered Web & Telegram backend for text, voice, image, and
+                music generation, implementing custom usage analytics and
+                token/credit expense tracking mechanisms (<strong
+                  >Node-RED, MongoDB</strong
+                >).
               </li>
               <li class="profession-duties-item">
-                Built analogues search engine integrating Developers.RIA API and
-                web scraping techniques to find comparable assets (vehicles,
-                real estate) with OpenAI-enhanced matching and Excel export
-                functionality.
-              </li>
-              <li class="profession-duties-item">
-                Developed call analysis system with Webitel integration
-                featuring React + TypeScript frontend with Tailwind CSS,
-                automated audio file processing via drag-and-drop, and
-                script-based call evaluation using OpenAI and ElevenLabs APIs.
-              </li>
-              <li class="profession-duties-item">
-                Created AI agent for Helpcrunch chat system to automate customer
-                support operations, implementing webhook integration, Redis
-                caching, custom script engine, and RabbitMQ for asynchronous
-                message processing.
+                <strong>Project Leadership:</strong> Owned backend architecture
+                end-to-end, defined API specs, and mentored Junior developers.
               </li>
             </ul>
-          </div>
+          </article>
 
           <!-- Company 2 -->
-          <div class="experience-item">
-            <h4 class="profession-title">
+          <article class="experience-item">
+            <h3 class="profession-title">
               Junior Full-Stack Engineer
-              <span class="profession-company">UBOS</span>
-            </h4>
+              <span class="profession-company">| UBOS</span>
+            </h3>
             <span class="profession-time"
-              >November 2023 - February 2025<span class="profession-divider"
+              >November 2023 – February 2025<span class="profession-divider"
                 >|</span
               >Ukraine</span
             >
             <ul class="profession-duties">
               <li class="profession-duties-item">
-                Designed and developed 5+ AI-powered chatbots for Telegram and
-                WhatsApp platforms using MongoDB, ChromaDB for vector storage,
-                Node-RED workflows, and Appsmith for admin interfaces.
+                <strong>AI-Powered Web & Messaging Bots:</strong> Developed 5+
+                enterprise AI solutions for Telegram & WhatsApp using
+                <strong>Node-Red, MongoDB, ChromaDB</strong>, and Appsmith
+                management dashboards.
               </li>
               <li class="profession-duties-item">
-                Built specialized support bots including: mobile app usage
-                assistant, project budget calculator with Excel export, and
-                environmental impact assessment report generator.
+                <strong>RAG Architecture & Knowledge Retrieval:</strong> Built
+                context-aware assistants utilizing vector databases
+                (<strong>ChromaDB</strong>) and <strong>RAG</strong> patterns
+                for automated document parsing and support.
               </li>
               <li class="profession-duties-item">
-                Developed content generation bots featuring image analysis and
-                creation (Midjourney integration), AI music generation (Suno
-                API), with social media sharing capabilities (Facebook, X) and
-                custom landing pages for content distribution.
-              </li>
-              <li class="profession-duties-item">
-                Created industrial park onboarding bot validating user inputs
-                against legal requirements, providing step-by-step guidance, and
-                identifying compliance issues with regulatory frameworks.
-              </li>
-              <li class="profession-duties-item">
-                Integrated voice capabilities using ElevenLabs for speech
-                synthesis and Whisper for speech-to-text, enabling multimodal
-                user interactions with text and voice inputs.
-              </li>
-              <li class="profession-duties-item">
-                Built AI assistant for Chatwoot chat widget using vector
-                databases (ChromaDB) and RAG (Retrieval-Augmented Generation)
-                architecture to provide context-aware customer support and
-                information gathering.
-              </li>
-              <li class="profession-duties-item">
-                Managed multiple third-party API integrations including OpenAI,
-                Claude, ElevenLabs, Midjourney, Suno, Zep, and messaging
-                platforms (Telegram Bot API, WhatsApp Business API).
+                <strong>Multimodal Media Integrations:</strong> Engineered
+                workflows with voice synthesis (<strong
+                  >ElevenLabs, Whisper STT</strong
+                >), image processing (Midjourney, Flux), music generation
+                (Suno).
               </li>
             </ul>
-          </div>
-        </div>
+          </article>
+        </section>
 
         <!-- Education -->
-        <div class="education-section">
-          <h3 class="about-me-title">Education</h3>
-
-          <div class="education-item">
-            <p class="education-university">IT School GoIT</p>
-            <p class="education-spec">Full Stack Developer</p>
-            <span class="education-time"
-              >March 2021 - May 2022<span class="education-divider">|</span
-              >Ukraine</span
-            >
+        <section class="education-section">
+          <div>
+            <h2 class="about-me-title">Education</h2>
           </div>
-
-          <div class="education-item">
-            <p class="education-university">
-              Central Ukrainian National Technical University
-            </p>
-            <p class="education-spec">Agronomy</p>
-            <span class="education-time"
-              >September 2016 - June 2018<span class="education-divider">|</span
-              >Ukraine</span
-            >
+          <div class="education-block">
+            <div class="education-item">
+              <p class="education-university">IT School GoIT</p>
+              <p class="education-spec">Full Stack Developer</p>
+              <span class="education-time">March 2021 – May 2022</span>
+            </div>
+            <div class="education-item">
+              <p class="education-university">
+                Central Ukrainian Nat. Tech. Univ.
+              </p>
+              <p class="education-spec">Agronomy</p>
+              <span class="education-time">September 2016 – June 2018</span>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
